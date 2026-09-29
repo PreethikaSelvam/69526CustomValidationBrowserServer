@@ -1,0 +1,23 @@
+Input used for both paths:
+Festival plan
+
+Culture:
+es-ES
+
+Browser message:
+Título localizado debe tener como máximo 6 palabras y como mínimo 3 palabras.
+
+Server message:
+Título localizado debe tener como máximo 6 palabras y como mínimo 3 palabras.
+
+Messages equal character-for-character:
+Yes
+
+formnovalidate POST observed:
+Yes
+
+Server rejected the invalid value:
+Yes
+
+Success confirmation displayed:
+No

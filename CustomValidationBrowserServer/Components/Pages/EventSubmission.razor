@@ -1,0 +1,51 @@
+@page "/events/new"
+@using CustomValidationBrowserServer.Models
+
+<PageTitle>Enviar evento</PageTitle>
+
+<h1>Enviar evento</h1>
+
+@if (Model is not null)
+{
+    <EditForm Model="Model" FormName="event-submission" OnValidSubmit="HandleValidSubmit" Enhance>
+        <DataAnnotationsValidator />
+
+        <div class="mb-3">
+            <label for="event-title" class="form-label">Título del evento</label>
+            <InputText id="event-title" class="form-control" @bind-Value="Model.Title" />
+            <ValidationMessage For="@(() => Model.Title)" />
+        </div>
+
+        <button id="submit-event" type="submit" class="btn btn-primary">Enviar</button>
+        <button id="submit-without-browser-validation"
+                type="submit"
+                class="btn btn-secondary"
+                formnovalidate>
+            Enviar sin validación del navegador
+        </button>
+    </EditForm>
+}
+
+@if (_submitted)
+{
+    <p id="submission-confirmation" class="alert alert-success mt-3">
+        Evento enviado correctamente.
+    </p>
+}
+
+@code {
+    [SupplyParameterFromForm(FormName = "event-submission")]
+    private EventModel? Model { get; set; }
+
+    private bool _submitted;
+
+    protected override void OnInitialized()
+    {
+        Model ??= new EventModel();
+    }
+
+    private void HandleValidSubmit()
+    {
+        _submitted = true;
+    }
+}

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms</value>
+  </resheader>
+  <data name="EventModel_Title_DisplayName" xml:space="preserve">
+    <value>Título localizado</value>
+  </data>
+  <data name="EventModel_Title_WordCountAttribute_Error" xml:space="preserve">
+    <value>{0} debe tener como máximo {2} palabras y como mínimo {1} palabras.</value>
+  </data>
+</root>
