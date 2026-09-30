@@ -61,6 +61,7 @@ From the repository root:
 
 ```powershell
 dotnet --info
+dotnet restore .\CustomValidationBrowserServer.sln
 dotnet build .\CustomValidationBrowserServer.sln --no-restore
 dotnet run --project .\CustomValidationBrowserServer\CustomValidationBrowserServer.csproj --no-build --launch-profile http
 ```
